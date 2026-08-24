@@ -1,3 +1,4 @@
+storing_what_happened = []
 food = 50
 water = 50
 energy = 6
@@ -5,9 +6,6 @@ day_number= 3
 
 
 while True:
-    storing_what_happened = []
-    
-
 
     print(f"This is your day number {day_number} ")
     print(f"You currently have {food} food")
@@ -31,20 +29,15 @@ while True:
     
 
     asking_player = input("What do you want to do now?")
-    food=food
-    water=water
-    energy=energy
-    day_number=day_number
-    asking_player=asking_player
-
+    
     options = ["rest","hunt","search","nothing"]
     if asking_player == options[0].lower():
         food=food
         water=water
         energy=energy
         day_number = day_number
+        storing_what_happened = [food,water,energy,day_number]
 
-        storing_what_happened = [food,water,energy,day_number,asking_player]
 
 
         energy+=energy_reducing
